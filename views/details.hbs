@@ -1,0 +1,45 @@
+<div class="container">
+    <h1 class="my-4">Title : {{car.title}}
+    </h1>
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <img class="img-fluid"
+                src="{{imageUrl}}"
+                alt="{{car.title}}" />
+        </div>
+
+        <div class="col-md-4 text-center">
+            <h3 class="my-3">Brand</h3>
+            <p>{{car.brand}}</p>
+            <h3 class="my-3">Year</h3>
+            <p>{{car.year}}</p>
+            <h3 class="my-3">Registration Plate</h3>
+            <p>{{car.registrationPlate}}</p>
+            <h3 class="my-3">Passed Kilometers</h3>
+            <p>{{car.passedKm}}</p>
+             <h3 class="my-3">Previous date for oil change</h3>
+            <p>{{car.oilChangedDate}}</p>
+             <h3 class="my-3">Next date for oil change</h3>
+            <p>{{car.nextDateForOilChange}}</p>
+            <h3 class="my-3">Duration</h3>
+            <p>{{car.duration}}</p>
+            <h3 class="my-3">Description</h3>
+            <p>{{car.description}}</p>
+
+            {{#if car.isOwner}}
+
+            <a class="btn btn-danger" href="/car/{{car._id}}/delete">Delete</a>
+            <a class="btn btn-warning" href="/car/{{car._id}}/edit">Edit</a>
+            {{else}}
+            {{#if car.enrolled}}
+            <span class="enrolled-span">You are already enrolled</span>
+            {{else}}
+            <a class="btn btn-primary" href="/car/{{car._id}}/enroll">Enroll</a>
+            {{/if}}
+            {{/if}}
+
+        </div>
+    </div>
+</div>

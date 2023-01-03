@@ -1,0 +1,44 @@
+<form class="text-center border border-light p-5" action="/car/create" method="post">
+    <h1>Create Car</h1>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" placeholder="Car name" name="title" value="{{body.title}}">
+    </div>
+     <div class="form-group">
+        <label for="brand">Brand</label>
+        <input type="text" class="form-control" placeholder="Car brand" name="brand" value="{{body.brand}}">
+    </div>
+     <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" class="form-control" placeholder="Car year" name="year" value="{{body.year}}">
+    </div>
+     <div class="form-group">
+        <label for="registrationPlate">Registration Plate</label>
+        <input type="text" class="form-control" placeholder="Car plate" name="registrationPlate" value="{{body.registrationPlate}}">
+    </div>
+     <div class="form-group">
+        <label for="passedKm">Passed Kilometers</label>
+        <input type="text" class="form-control" placeholder="Car Kilometers" name="passedKm" value="{{body.passedKm}}">
+    </div>
+    <div class="form-group">
+        <label for="oilChangedDate">Previous date for oil change</label>
+        <input type="text" class="form-control" placeholder="Previous date for oil change" name="oilChangedDate" value="{{body.oilChangedDate}}">
+    </div>
+    <div class="form-group">
+        <label for="nextDateForOilChange">Next date for oil change</label>
+        <input type="text" class="form-control" placeholder="Next date for oil change" name="nextDateForOilChange" value="{{body.nextDateForOilChange}}">
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" placeholder="Description" name="description">{{body.description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image url</label>
+        <input type="text" class="form-control" placeholder="Image Url" name="imageUrl" value="{{body.imageUrl}}">
+    </div>
+    <div class="form-group">
+        <label for="duration">Duration</label>
+        <input type="text" class="form-control" placeholder="4 weeks" name="duration" value="{{body.duration}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

@@ -1,0 +1,26 @@
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Car</h1>
+                    <p class="lead">Post your car here</p>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="text-center">Top Cars</h1>
+                <div class="container mt-3">
+                    {{#if cars}}
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="card-deck">
+                           {{#each cars}}
+                           {{> car}}
+                           {{/each}}
+                        </div>
+ 
+                    </div>
+                    {{else}}
+                    <h4 class="text-center">No cars...</h4>
+                    {{/if}}
+
+                </div>
+            </div>

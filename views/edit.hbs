@@ -1,0 +1,47 @@
+{{#with car}}
+<form class="text-center border border-light p-5" action="/car/{{_id}}/edit" method="POST">
+    <h1>Edit Car</h1>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" placeholder="Car name" value="{{title}}" name="title">
+    </div>
+     <div class="form-group">
+        <label for="brand">Brand</label>
+        <input type="text" class="form-control" placeholder="Car brand" value="{{brand}}" name="brand">
+    </div>
+     <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" class="form-control" placeholder="Car year" value="{{year}}" name="year">
+    </div>
+     <div class="form-group">
+        <label for="registrationPlate">Registration Plate</label>
+        <input type="text" class="form-control" placeholder="Car plate" value="{{registrationPlate}}" name="registrationPlate">
+    </div>
+      <div class="form-group">
+        <label for="passedKm">Passed Kilometers</label>
+        <input type="text" class="form-control" placeholder="Car kilometers" value="{{passedKm}}" name="passedKm">
+    </div>
+    <div class="form-group">
+        <label for="oilChangedDate">Previous date for oil change</label>
+        <input type="text" class="form-control" placeholder="Previous date for oil change" value="{{oilChangedDate}}" name="oilChangedDate">
+    </div>
+    <div class="form-group">
+        <label for="passedKm">Next date for oil change</label>
+        <input type="text" class="form-control" placeholder="Next date for oil change" value="{{nextDateForOilChange}}" name="nextDateForOilChange">
+    </div>
+  <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" placeholder="Description" name="description">{{description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image url</label>
+        <input type="text" class="form-control" placeholder="Image Url" value="{{imageUrl}}" name="imageUrl">
+    </div>
+    <div class="form-group">
+        <label for="duration">Duration</label>
+        <input type="text" class="form-control" placeholder="4 weeks" value="{{duration}}" name="duration">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+{{/with}}
