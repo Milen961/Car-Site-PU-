@@ -45,7 +45,6 @@ carController.post('/create', async (req,res) => {
         nextDateForOilChange:req.body.nextDateForOilChange,
         description: req.body.description,
         imageUrl: req.body.imageUrl,
-        duration: req.body.duration,
         owner:req.user._id
 
     };

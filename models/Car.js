@@ -22,7 +22,6 @@ const carSchema = new Schema({
             message: 'Invalid URL'
         }
     },
-    duration: { type: String, required: [true, 'Duration is required']},
     createdAt: { type: String, required: true, default: () => (new Date()).toISOString().slice(0, 10 ) },
     users: { type: [Types.ObjectId], ref: 'User', default: [] },
     userCount: { type: Number, default: 0},

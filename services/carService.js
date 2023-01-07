@@ -36,7 +36,7 @@ const Car = require("../models/Car");
    existing.nextDateForOilChange = data.nextDateForOilChange;
    existing.description = data.description;
    existing.imageUrl = data.imageUrl;
-   existing.duration = data.duration;
+   
 
    return existing.save()
  }
